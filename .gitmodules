@@ -1,0 +1,4 @@
+[submodule "brainbodydata/data"]
+	path = brainbodydata/data
+	url = datalad-annex::?type=external&externaltype=dataverse&encryption=none&exporttree=no&url=https%3A//borealisdata.ca&doi=doi:10.5683/SP3/WUYAGU
+	datalad-id = 2cbbdbb8-c8f3-41dd-ba4b-581d4e829598
