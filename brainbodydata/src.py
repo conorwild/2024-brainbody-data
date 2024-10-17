@@ -357,13 +357,14 @@ class DataSource(ABC):
         make sure that data are present and intact. Note, this version is
         specialized to fetch from a dataverse.
         """
-        data_siblings = dl.siblings(  # type: ignore
-            dataset=self.data_path,
-            result_renderer=self._dl_renderer,
-        )
+        dataset = dl.Dataset(self.data_path)
+        if not dataset.is_installed():
+            dl.get(self.data_path, get_data=False)  # type: ignore
+
+        data_siblings = dataset.siblings(result_renderer=self._dl_renderer)
 
         if "dataverse-storage" not in [s["name"] for s in data_siblings]:
-            dl.enable(dataset=self.data_path, action="enable", name="dataverse-storage")  # type: ignore
+            dataset.siblings(action="enable", name="dataverse-storage")
 
         dl.get(  # type: ignore
             self.src_pathname,
