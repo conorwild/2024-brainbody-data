@@ -19,11 +19,11 @@ This repository contains a Datalad dataset that implements a Python package to w
 
 <code>Wild, Conor; Xue, Alex; Paleczny, Sydni; Highfield, Roger; Owen, Adrian, 2024, "The Brain & Body Study - complete raw dataset", https://doi.org/10.5683/SP3/WUYAGU, Borealis, DRAFT VERSION, UNF:6:2w6TmV63h3y9/GNUox7O1A== [fileUNF]</code>
 
-The purpose of *this* package is to provide an easy-to-use API for working with these data in a Python notebook. Using Datalad, this API will automatically clone the data raw rom Borealis (dataverse). Once installed, the classes exposed by this API will automatically load, preprocess, and score the various data source files, producing clean [Pandas](https://pandas.pydata.org/) dataframes that you can use for your analses. Data preprocessing uses [Pandera](https://pandera.readthedocs.io/en/stable/) to validate dataframes and convert data types (e.g., converting strings into categorical variables). You can use this package to enable your own (Python) analyses of these data! If you use R, SPSS, or something else to analyze data then you will have to start with the raw data files (see Borealis link).
+The purpose of *this* package is to provide an easy-to-use API for working with these data in a Python notebook. Using Datalad, this API will automatically clone the raw data from Borealis (dataverse). Once installed, the classes exposed by this API will automatically load, preprocess, and score the various data source files, producing clean [Pandas](https://pandas.pydata.org/) dataframes that you can use for your analses. Data preprocessing uses [Pandera](https://pandera.readthedocs.io/en/stable/) to validate dataframes and convert data types (e.g., converting strings into categorical variables). You can use this package to enable your own (Python) analyses of these data! If you use R, SPSS, or something else to analyze data then you will have to start with the raw data files (see Borealis link).
 
 # Requirements
 
-You need to have [Datalad](https://www.datalad.org/), [datalad-dataverse](https://docs.datalad.org/projects/dataverse/en/latest/index.html), and [datalad-osf](http://docs.datalad.org/projects/osf/en/latest/) installed in order to clone and use this dataset. Assuming that you have activate a Python virtual environment or a Conda environment:
+You need to have [Datalad](https://www.datalad.org/), [datalad-dataverse](https://docs.datalad.org/projects/dataverse/en/latest/index.html), and [datalad-osf](http://docs.datalad.org/projects/osf/en/latest/) installed in order to clone and use this dataset. Assuming that you have activated a Python virtual environment or a Conda environment:
 
 ```
 ~$ pip3 install datalad datalad-osf datalad-dataverse
