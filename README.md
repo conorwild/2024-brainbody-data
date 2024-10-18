@@ -55,6 +55,8 @@ paaq = PAAQ(dl_rendered="disabled")  # I don't want to see the Datalad output
 paaq.data.head()
 ```
 
+See `./notebooks/example.ipynb` for more.
+
 # Notes
 
 Also, see http://docs.datalad.org/projects/osf/en/latest/tutorial.html
